@@ -1,0 +1,49 @@
+% ========================= jrmIpadTemplate.Rnw ========================
+% 3456789012345678901234567890123456789012345678901234567890123456789012
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\input{./inc/jrm-iPad-macros.tex}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+%
+% Set up Sweave...
+%
+<<echo=F,results=hide>>=
+# A hidden code chunk
+# start with a clean environment
+rm(list=ls())
+options(digits=4, width=65, continue=" ")
+# be sure to set as needed
+str.wd <- '~/work/proj/jrmIpadTemplate/Sweave/'
+setwd(str.wd)
+Sys.setenv(TEXINPUTS=str.wd)
+Sys.setenv(BIBINPUTS=str.wd)
+Sys.setenv(BSTINPUTS=str.wd)
+# make sure needed packages & functions are loaded
+require(xtable)
+@
+
+% use a custom title
+\begin{center}
+  \Large{\textbf{\textcolor{red}{Title}}} \\
+  \large{\today}
+\end{center}
+
+\begin{quotation}
+$^{39}$You search the Scriptures because you think that in them you have
+eternal life; and it is they that bear witness about me, $^{40}$yet you
+refuse to come to me that you may have life. [Jn~5:39--40, ESV]
+\end{quotation}
+
+\section{First section}
+\hangindent=0.25in The programmer’s text processing system, in which you have to compile your document before it turns into something viewable. It gives us the joys of truly beautiful equation typesetting and the agonies of obscure commands, crazy ``badness'' rules, and sometimes obstreperous auto-figure placement.
+
+\subsection{A subsection}
+
+More text.
+
+\subsubsection{A sss}
+
+\end{document}
